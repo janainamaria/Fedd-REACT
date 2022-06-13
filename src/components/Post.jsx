@@ -14,6 +14,7 @@ export function Post(){
 
         <time title='13 de julho as 13hrs' dateTime='2022-06-13 13:37:00'>Publicado há 1 hora</time>
       </header>
+
       <div className={styles.content}>
           <p>Fala galeraa 👋</p>
           
@@ -25,6 +26,15 @@ export function Post(){
           <a href="">#nlw</a> {'  '}
           <a href="">#rocketseat</a> 
       </div>
+
+    <form className={styles.comentForm}>
+      <strong>Deixe seu feedback:</strong>
+
+      <textarea placeholder='Deixe um comentario'/>
+        <footer>
+      <button type='submit'>Publicar</button>
+        </footer>
+    </form>
     </article>
   )
 }
