@@ -1,4 +1,4 @@
-import {PencilLine} from "phosphor-react"
+import {LinkedinLogo} from "phosphor-react"
 import { Avatar } from "./Avatar"
 import styles from  './Sidebar.module.css'
 export function Sidebar(){
@@ -11,9 +11,9 @@ export function Sidebar(){
         <span>Desenvolvedora de Front-end</span>
       </div>
       <footer>
-        <a href="#">
-          <PencilLine size={20}/>
-          Editar seu perfil
+        <a href="https://www.linkedin.com/in/janaina-monteiro-015455213/">
+          <LinkedinLogo size={20}/>
+          Linkedin
         </a>
       </footer>
     </aside>

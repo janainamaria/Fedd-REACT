@@ -17,15 +17,15 @@ export function Post(){
       </header>
 
       <div className={styles.content}>
-          <p>Fala galeraa 👋</p>
+          <p>Oi pessoal!</p>
           
-          <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
+          <p>Acabei de criar esse projetinho de feed com react! o que você achou? conta aqui. Segue abaixo o link do repositorio no github</p>
           
-          <a href=""><p> jane.design/doctorcare</p></a>
+          <a href="https://github.com/janainamaria/Feed-REACT"><p>Clique aqui para o repositorio no github</p></a>
 
-          <a href="">#novoprojeto</a>{'  '}
-          <a href="">#nlw</a> {'  '}
-          <a href="">#rocketseat</a> 
+          <a href="">#Dev</a>{'  '}
+          <a href="">#react</a> {'  '}
+          <a href="">#Front-end</a> 
       </div>
 
     <form className={styles.comentForm}>

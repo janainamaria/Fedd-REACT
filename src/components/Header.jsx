@@ -1,11 +1,13 @@
 import styles from './Header.module.css'
-import logo from '../assets/ignite-logo.svg'
+import { Alien} from "phosphor-react";
 
 
 export function Header(){
   return(
     <header className={styles.header}>
-    <img src={logo} alt="logotipo" />
+      <div className='logon'>
+          <Alien size={40}/>
+      </div>
     </header>
   );
 }

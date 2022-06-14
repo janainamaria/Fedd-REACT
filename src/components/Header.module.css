@@ -4,8 +4,6 @@
   justify-content: center;
   height: 80px;
   padding: 1.25rem 0;
-}
+  align-items: center;
 
-.header img {
-  height: 2rem;
 }
