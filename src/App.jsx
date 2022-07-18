@@ -39,6 +39,7 @@ const posts = [
 
 
 export function App() {
+  console.log(posts.author);
 
   return (
    <div>
@@ -49,8 +50,15 @@ export function App() {
         </aside>
         <main>
          {posts.map(post=>{
-            return <Post/>
-         }
+           return( 
+            <Post
+              author={post.author}
+              content={post.content}
+              publicationDate={post.publicationDate}
+            />
+            
+            )
+          }
 
          )}
         </main>
