@@ -3,8 +3,9 @@ import { Comment } from './Comment'
 import styles from './Post.module.css'
 
 
-export function Post(props,publicationDate){
+export function Post(props){
 
+  console.log(props.content);
   const publicationDateFormatted = format(props.publicationDate , 'dd/MM/yyyy')
 
   return(
@@ -25,15 +26,12 @@ export function Post(props,publicationDate){
       </header>
 
       <div className={styles.content}>
-          <p>Oi pessoal!</p>
-          
-          <p>Acabei de criar esse projetinho de feed com react! o que você achou? conta aqui. Segue abaixo o link do repositorio no github</p>
-          
-          <a href="https://github.com/janainamaria/Feed-REACT"><p>Clique aqui para o repositorio no github</p></a>
-
-          <a href="">#Dev</a>{'  '}
-          <a href="">#react</a> {'  '}
-          <a href="">#Front-end</a> 
+         {props.content.map(line => {
+            if (line.type === 'paragraph') {
+              return <p>{line.content}</p>
+            }else if(line.type === 'link')
+             return <p><a href={line.content}>{line.content}</a></p>
+         })}
       </div>
 
     <form className={styles.comentForm}>
