@@ -19,27 +19,26 @@ const posts = [
       {type: 'paragraph', content:'Acabei de criar esse projetinho de feed com react! o que você achou? conta aqui. Segue abaixo o link do repositorio no github' },
       {type: 'link', content:"https://github.com/janainamaria/Feed-REACT"},
      ], 
-     publicationDate: new Date ('2022-18-06 20:00:00')
+     publicationDate: new Date(2022, 6, 20)
   },
   {
     id: 2,
     author:{
-      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      name: 'Matheus sobral',
+      avatarUrl: "https://avatars.githubusercontent.com/u/36102609?v=4",
+      name: 'Fernando santana',
       role:'Desenvolvedor de back-end',
     },
     content:[
       {type: 'paragraph', content:  'Fala galera'},
-      {type: 'paragraph', content:'Adorei o projetinho da janaina e queria comentar com vocês, acham que foi necessario? falem aqui comigo!' },
-      {type: 'link', content:"https://github.com/janainamaria/Feed-REACT"},
+      {type: 'paragraph', content:'Adorei o projetinho da janaina! tambem possuo alguns projetinhos. segue o link de um bem legal!!' },
+      {type: 'link', content:"https://github.com/Fernando01santana/API-VENDAS"},
      ], 
-     publicationDate: new Date ('2022-19-06 18:00:00')
+     publicationDate: new Date(2022, 5, 21)
   },
 ]
 
 
 export function App() {
-  console.log(posts.author);
 
   return (
    <div>

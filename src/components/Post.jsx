@@ -1,21 +1,27 @@
+import { format} from 'date-fns'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
 
-export function Post(props){
-  console.log(props);
+export function Post(props,publicationDate){
+
+  const publicationDateFormatted = format(props.publicationDate , 'dd/MM/yyyy')
+
   return(
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img src="https://avatars.githubusercontent.com/u/87093667?v=4" />
-        <div className={styles.authorInfo}>
-          <strong>Janaina Maria</strong>
-          <span>Desenvolvedora de Front-end</span>
+          <img src={props.author.avatarUrl} />
+          <div className={styles.authorInfo}>
+          <strong>{props.author.name}</strong>
+          <span>{props.author.role}</span>
         </div>
         </div>
 
-        <time title='13 de julho as 13hrs' dateTime='2022-06-13 13:37:00'>Publicado há 1 hora</time>
+        <time title='' dateTime='2022-06-13 13:37:00'>
+          {publicationDateFormatted}
+        </time>
+
       </header>
 
       <div className={styles.content}>
