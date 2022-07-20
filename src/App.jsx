@@ -30,7 +30,7 @@ const posts = [
     },
     content:[
       {type: 'paragraph', content:  'Fala galera'},
-      {type: 'paragraph', content:'Adorei o projetinho da janaina! tambem possuo alguns projetinhos. segue o link de um bem legal!!' },
+      {type: 'paragraph', content:'Adorei o projetinho da janaina! tambem possuo alguns projetinhos. segue o link de um bem legal!! Uma api de vendas' },
       {type: 'link', content:"https://github.com/Fernando01santana/API-VENDAS"},
      ], 
      publicationDate: new Date(2022, 5, 21)

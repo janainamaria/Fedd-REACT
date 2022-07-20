@@ -1,12 +1,22 @@
 import { format} from 'date-fns'
+import { useState } from 'react'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
 
 export function Post(props){
 
+  const [comments, setcomments] = useState([1,2,])
+
+
   console.log(props.content);
   const publicationDateFormatted = format(props.publicationDate , 'dd/MM/yyyy')
+
+  function createNewComment() {
+    event.preventDefault()
+    setcomments([...comments, comments.length +1])
+    console.log(comments);
+  }
 
   return(
     <article className={styles.post}>
@@ -34,10 +44,12 @@ export function Post(props){
          })}
       </div>
 
-    <form className={styles.comentForm}>
+    <form onSubmit={createNewComment} className={styles.comentForm}>
       <strong>Deixe seu feedback:</strong>
 
       <textarea placeholder='Deixe um comentario'/>
+
+
         <footer>
       <button type='submit'>Publicar</button>
         </footer>
@@ -45,9 +57,12 @@ export function Post(props){
 
 
     <div className={styles.commentList}>
-      <Comment/>
-      <Comment/>
-      <Comment/>
+         {comments.map(comment =>{
+            return <Comment/>
+
+         })}
+
+
     </div>
     </article>
   )
